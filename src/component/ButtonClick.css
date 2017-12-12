@@ -1,0 +1,10 @@
+.Button-click{
+	outline: none;
+	width: 100px;
+	height: 40px;
+	border: none;
+}
+
+.Button-yello{
+	background: rgba(0, 100, 100, 1);
+}
