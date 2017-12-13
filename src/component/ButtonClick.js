@@ -2,21 +2,40 @@ import React, { Component } from 'react';
 import './ButtonClick.css';
 
 class ButtonClick extends Component {
-	constructor(){
-		super();
+	constructor(props){
+		super(props);
 
-		this.klass = 'Button-click';
+		this.state = {
+			klass: 'Button-click',
+			count: 0
+		};
+
+		// 绑定this
+		this.click = this.click.bind(this);
 	}
 
 	render() {
-		return (<button className={this.klass} onClick={this.click}>点击</button>);
+		return (<button className={this.state.klass} onClick={this.click}>点击</button>);
 	}
 
-	click(e){
-		console.log(e);
-		console.log('hello world');
-		console.log(this);
-		// this.klass = ' Button-yello';
+	click(){
+		this.klass = ' Button-yellow';
+
+		let preKlass = this.state.klass;
+		let count = this.state.count;
+		let endCount = count + 1;
+
+		if(count%2 === 0){
+			this.setState({
+				klass: 'Button-click Button-yellow',
+				count: endCount
+			});
+		}else{
+			this.setState({
+				klass: 'Button-click',
+				count: endCount
+			});
+		}
 	}
 }
 
