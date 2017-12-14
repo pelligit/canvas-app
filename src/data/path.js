@@ -19,4 +19,8 @@ export default {
 		path: '/case',
 		text: '案例'
 	},
+	uilib:{
+		path: '/uilib',
+		text: 'UI组件'
+	}
 }

@@ -3,7 +3,8 @@
 	height: 30px;
 	margin: 0 auto;
 	line-height: 30px;
-	text-shadow: 1px 1px 3px #666;
+	/*text-shadow: 1px 1px 3px #666;*/
+	color: #ddd;
 	text-align: center;
 	margin-bottom: 5px;
 }
@@ -17,7 +18,7 @@
 	display: inline-block;
 	width: 40px;
 	margin: 0 5px;
-	background-color: #ccc;
+	/*background-color: #ccc;*/
 	text-align: center;
 	cursor: pointer;
 	border-radius: 5px;

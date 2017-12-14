@@ -80,7 +80,6 @@ class Clock extends Component{
 	// 开始计时
 	start(){
 		if(!this.running){
-			let _this = this;
 			this.timer = setInterval(this.refresh, 1000);
 			this.running = true;
 		}

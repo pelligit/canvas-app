@@ -1,0 +1,28 @@
+.card-box{
+	/*width: 100%;*/
+	height: auto;
+	box-shadow: 0 0 3px #ccc;
+	padding: 5px;
+	margin: 5px;
+}
+
+.card-title{
+	line-height: 30px;
+	font-size: 15px;
+	color: #000;
+}
+
+.card-infos{
+	font-size: 13px;
+	color: #bbb;
+}
+
+.card-infos span{
+	margin-right: 10px;
+}
+
+.card-content{
+	font-size: 14px;
+	color: #999;
+	line-height: 30px;
+}

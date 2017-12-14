@@ -1,0 +1,22 @@
+.nav-container{
+	border-bottom: solid 1px #eee;
+}
+
+.page-nage{
+	width: 100%;
+	font-size: 14px;
+	line-height: 30px;
+	height: 30px;
+	/*border-bottom: dashed 1px #dedede;*/
+}
+
+.page-nage span{
+	width: 15%;
+	display: inline-block;
+	text-align: center;
+}
+
+.page-nage span a{
+	color: #999;
+	text-decoration: none;
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import paths from '../data/path';
+import './Nav.css';
 
 class Nav extends Component{
 	constructor(props){
@@ -13,11 +14,11 @@ class Nav extends Component{
 		const arr = [];
 
 		for(let name in paths){
-			if(name == curPage){
+			if(name === curPage){
 				continue;
 			}
 
-			arr.push(<Link key={name} to={paths[name].path}>{paths[name].text}</Link>);
+			arr.push(<span key={name}><Link to={paths[name].path}>{paths[name].text}</Link></span>);
 		}
 
 		return arr;
@@ -25,8 +26,10 @@ class Nav extends Component{
 
 	render(){
 		return (
-			<div>
-				{this.navlist()}
+			<div className="nav-container">
+				<div className="page-nage">
+					{this.navlist()}
+				</div>
 			</div>
 		);
 	}

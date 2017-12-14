@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
-import Nav from '../page/Nav';
-
-import {
-  Link
-} from 'react-router-dom';
+import Canvas from '../component/Canvas';
 
 
 class Case extends Component{
 	render(){
 		return (
 			<div>
-				<Nav cur='case' />
+				<Canvas />
 			</div>
 		);
 	}

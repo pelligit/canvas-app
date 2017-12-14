@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
+import data from '../data/nav';
 import List from '../component/List';
-import gameName from '../data/game';
 
-
-class Game extends Component{
+class Intro extends Component{
 	render(){
 		return (
 			<div>
-				<List data={gameName}/>
+				<List data={data['intro']}></List>
 			</div>
 		);
 	}
 }
 
-export default Game;
+export default Intro;
