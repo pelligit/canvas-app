@@ -10,27 +10,35 @@ class Tab extends Component{
 			content: tab_data[0]['content']
 		};
 
-		this.status = [];
+		this.len = tab_data.length;
+		this.status = this.setStatusArr(0);
 	}
 
 	tabMenu(){
 		const arr = [];
-		let len = tab_data.length;
-		let w = 90/len;
+		
+		// 计算每个tab占的百分比宽度
+		let w = 100/this.len;
+
 		let css = {
 			width: '' + w + '%'
 		};
 
-		let klassStr = '';
+		let activeStr = 'tab-menu-item active';
+		let klassStr = 'tab-menu-item';
+		let verticalLine = <span className="vertical-split-line"></span>;
+		let noLine = <span className="no-split-line"></span>;
 
-		for(let i = 0; i < len; i++){
-			if(i === 0){
-				klassStr = 'tab-menu-item active';
-			}else{
-				klassStr = 'tab-menu-item';
-			}
+		for(let i = 0; i < this.len; i++){
+			let curStatus = this.status[i];
+			let condition = curStatus === 1 || this.status[i - 1] === 1 || i === 0;
 
-			arr.push(<div className={klassStr} style={css} onClick={this.changeTab.bind(this, i)} key={i}>{tab_data[i]['title']}</div>);
+			arr.push(
+				<div className={curStatus === 1 ? activeStr : klassStr} style={css} onClick={this.changeTab.bind(this, i, tab_data[i]['fn'])} key={i}>
+					{tab_data[i]['title']}
+					{condition ? noLine : verticalLine}
+				</div>
+				);
 		}
 
 		return arr;
@@ -49,11 +57,30 @@ class Tab extends Component{
 		);
 	}
 
-	changeTab(index){
-		console.log(index);
+	changeTab(index, fn){
+		this.status = this.setStatusArr(index);
+
 		this.setState({
 			content: tab_data[index]['content']
 		});
+
+		if(fn && typeof fn === 'function'){
+			fn(index, tab_data[index]['title'], tab_data[index]['content'], this);
+		}
+	}
+
+	setStatusArr(index){
+		const arr = [];
+
+		for(let i = 0; i < this.len; i++){
+			if(i === index){
+				arr.push(1);
+			}else{
+				arr.push(2);
+			}
+		}
+
+		return arr;
 	}
 }
 

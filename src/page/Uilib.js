@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Card from '../ui-lib/Card';
 import card_data from '../ui-lib/data/card-data';
 import Tab from '../ui-lib/Tab';
+import ImgBox from '../ui-lib/ImgBox';
+import DropDown from '../ui-lib/DropDown';
 
 class Uilib extends Component{
 	cardList(){
@@ -21,6 +23,8 @@ class Uilib extends Component{
 				{this.cardList()}
 				
 				<Tab />
+
+				<DropDown />
 			</div>
 		);
 	}
