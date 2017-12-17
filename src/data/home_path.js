@@ -22,5 +22,13 @@ export default {
 	uilib:{
 		path: '/uilib',
 		text: 'UI组件'
+	},
+	svg:{
+		path: '/svg',
+		text: 'SVG'
+	},
+	echart: {
+		path: '/echart',
+		text: '图表'
 	}
 }

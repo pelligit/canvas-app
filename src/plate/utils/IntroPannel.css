@@ -1,0 +1,17 @@
+.intro-pannel-box{
+	padding: 10px 5px;
+	margin: 5px;
+	box-shadow: 0 0 5px #ddd;
+}
+
+.intro-pannel-title{
+	font-size: 15px;
+	margin: 10px 0;
+}
+
+.intro-pannel-content{
+	font-size: 14px;
+	line-height: 30px;
+}
+
+

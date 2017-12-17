@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
-import Card from '../ui-lib/Card';
-import card_data from '../ui-lib/data/card-data';
-import Tab from '../ui-lib/Tab';
-import ImgBox from '../ui-lib/ImgBox';
-import DropDown from '../ui-lib/DropDown';
+import Card from '../plate/uilib/Card';
+import card_data from '../plate/uilib/data/card-data';
+import Tab from '../plate/uilib/Tab';
+import ImgBox from '../plate/uilib/ImgBox';
+import DropDown from '../plate/uilib/DropDown';
+import drop_down_data from '../plate/uilib/data/drop-down-data';
+import ChildNavTop from './nav/ChildNavTop';
+// import tab_data from '../ui-lib/data/tab-data';
 
 class Uilib extends Component{
 	cardList(){
@@ -20,11 +23,12 @@ class Uilib extends Component{
 
 		return (
 			<div>
+				<ChildNavTop text="react组件" />
 				{this.cardList()}
 				
 				<Tab />
 
-				<DropDown />
+				<DropDown title={drop_down_data['title']} name={drop_down_data['name']} />
 			</div>
 		);
 	}

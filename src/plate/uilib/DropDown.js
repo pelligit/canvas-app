@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import drop_down_data from './data/drop-down-data';
 import './DropDown.css';
 
 class DropDown extends Component{
@@ -29,8 +28,6 @@ class DropDown extends Component{
 	}
 
 	render(){
-		const names = drop_down_data['name'];
-
 		let css = {
 			display: !this.state.show ? 'none' : 'block'
 		};
@@ -42,10 +39,10 @@ class DropDown extends Component{
 		return (
 			<div className="drop-down-container">
 				<div className="drop-down-title" style={this.state.show ? titleBorder : {}}>
-					<span onClick={this.toggleDropDown.bind(this)}>{drop_down_data['title']}</span>
+					<span onClick={this.toggleDropDown.bind(this)}>{this.props.title}</span>
 				</div>
 				<ul className="drop-down-item-box" style={css}>
-					{this.getList(names)}
+					{this.getList(this.props.name)}
 				</ul>
 			</div>
 		);

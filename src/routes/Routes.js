@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { Router, Route, Link } from 'react-router-dom';
-import App from '../App';
-import Game from './Game';
-import Case from './Case';
-import Course from './Course';
-import Intro from './Intro';
-import Uilib from './Uilib';
+import Game from '../page/Game';
+import Case from '../page/Case';
+import Course from '../page/Course';
+import Intro from '../page/Intro';
+import Uilib from '../page/Uilib';
+import Home from '../page/Home';
+import Saolei from '../plate/game/Saolei';
 
 import createBrowserHistory from 'history/createBrowserHistory'
 const history = createBrowserHistory();
@@ -19,8 +20,9 @@ class Routes extends Component{
 						{this.props.children}
 					</div>
 					<div>
-						<Route exact path="/" component={App} />
+						<Route exact path="/" component={Home} />
 						<Route path="/game" component={Game} />
+						<Route path="/game/saolei" component={Saolei} />
 						<Route path="/case" component={Case} />
 						<Route path="/course" component={Course} />
 						<Route path="/intro" component={Intro} />
