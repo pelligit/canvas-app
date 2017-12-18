@@ -23,7 +23,7 @@ class Uilib extends Component{
 
 		return (
 			<div>
-				<ChildNavTop text="react组件" />
+				<ChildNavTop text="react组件" link="/uilib" icon="tasks" />
 				{this.cardList()}
 				
 				<Tab />

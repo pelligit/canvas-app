@@ -12,7 +12,11 @@ class ChildNavTop extends Component{
 				arr.push(<span key="leve1-span"><i className="fa fa-angle-right"></i></span>);
 
 				if(_this.props.link && _this.props.link.length !== 0){
-					arr.push(<span key="leve1-text"><Link to={_this.props.link}>{_this.props.text}</Link></span>);
+					if(_this.props.icon && _this.props.icon.length !== 0){
+						arr.push(<span key="leve1-text"><i className={"fa fa-" + _this.props.icon}></i><Link to={_this.props.link}>{_this.props.text}</Link></span>);
+					}else{
+						arr.push(<span key="leve1-text"><Link to={_this.props.link}>{_this.props.text}</Link></span>);
+					}
 				}else{
 					arr.push(<span key="leve1-text">{_this.props.text}</span>);
 				}
@@ -27,7 +31,11 @@ class ChildNavTop extends Component{
 			const arr = [];
 			if(_this.props.text1 && _this.props.text1.length !== 0){
 				arr.push(<span key="leve1-span"><i className="fa fa-angle-right"></i></span>);
-				arr.push(<span key="leve1-text">{_this.props.text1}</span>);
+				if(_this.props.icon1 && _this.props.icon1.length !== 0){
+					arr.push(<span key="leve1-text"><i className="fa fa-{this.props.icon1}"></i>{_this.props.text1}</span>);
+				}else{
+					arr.push(<span key="leve1-text">{_this.props.text1}</span>);
+				}
 
 				return arr;
 			}else{

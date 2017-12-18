@@ -1,0 +1,26 @@
+.game-list-wraper{
+	list-style: none;
+	padding: 5px;
+	margin: 5px;
+	box-shadow: 0 0 5px #ccc;
+	font-size: 14px;
+	line-height: 30px;
+}
+
+.game-list-wraper li{
+	border-bottom: solid 1px rgba(250, 160, 0, 1);
+}
+
+.game-list-wraper li:last-child{
+	border: none;
+}
+
+.game-list-wraper li a{
+	text-decoration: none;
+	color: rgba(250, 160, 0, 1);
+}
+
+.point-to-right{
+	float: right;
+	color: rgba(250, 160, 0, 1);
+}

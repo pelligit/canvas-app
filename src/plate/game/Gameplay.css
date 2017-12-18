@@ -1,0 +1,6 @@
+.game-box{
+	margin: 5px;
+	padding: 5px;
+	box-shadow: 0 0 5px #ccc;
+	font-size: 15px;
+}

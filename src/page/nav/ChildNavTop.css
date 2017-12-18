@@ -15,3 +15,7 @@
 	color: rgba(250, 160, 0, 1);
 	text-decoration: none;
 }
+
+.child-nav-top span i{
+	margin-right: 5px;
+}
